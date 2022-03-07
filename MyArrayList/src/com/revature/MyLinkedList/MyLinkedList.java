@@ -33,6 +33,12 @@ public class MyLinkedList <T>{
             numberOfElements++;
     }
 
+    public void pushBack(T data){
+        Node newNode = new Node(data,back,back.prev);
+        back.prev = newNode;
+        numberOfElements++;
+    }
+
     public int inList(T data){
         Node getNode=front.next;
         int count = 0;
